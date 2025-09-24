@@ -1,0 +1,85 @@
+/* videoComponent.module.css (ConvoMeet purple) */
+.meetVideoContainer {
+    position: relative;
+    height: 100vh;
+    background: #e9cfff;   /* same light purple as landing page */
+}
+
+.meetUserVideo {
+    position: absolute;
+    bottom: 10vh;
+    height: 22vh;
+    width: auto;
+    left: 1.6rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(16,24,40,0.08);
+    border: 2px solid rgba(124,58,237,0.06);
+}
+
+.buttonContainers {
+    position: absolute;
+    width: 100%;
+    bottom: 20px;              /* lift buttons a little above bottom */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;                 /* spacing between buttons */
+}
+
+.buttonContainers svg {
+    font-size: 2.5rem;
+    background: #ffffff;       /* add background circle */
+    color: #7A3DD6;            /* purple icon color */
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.buttonContainers svg:hover {
+    transform: scale(1.1);
+}
+
+
+/* icon button overrides (in case MUI inlines style) */
+.buttonContainers .MuiIconButton-root {
+    background: rgba(0,0,0,0.28);
+    color: white;
+    border-radius: 14px;
+    padding: 10px;
+    box-shadow: 0 6px 16px rgba(16,24,40,0.12);
+}
+
+/* chat panel */
+.chatRoom {
+    position: absolute;
+    height: 92vh;
+    right: 12px;
+    background: var(--surface);
+    border-radius: 12px;
+    width: 28vw;
+    padding: 18px;
+    box-shadow: 0 10px 30px rgba(16,24,40,0.06);
+}
+
+.chattingArea {
+    position: relative;
+    margin-top: 12px;
+}
+
+.conferenceView { 
+    display: flex;
+    padding: 16px;
+    gap: 12px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.conferenceView video {
+    width: 36vw;
+    height: 22vh;
+    min-width: 180px;
+    border-radius: 10px;
+    background: #000;
+}

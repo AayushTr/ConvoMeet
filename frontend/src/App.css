@@ -1,0 +1,152 @@
+.landingPageContainer {
+  width: 100vw;
+  height: 100vh;
+  background: #e6ccff; /* light purple */
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.landingPageContainer nav {
+  height: 100px;                 /* slim navbar */
+  padding-inline: 1rem;         /* less horizontal space */
+  padding-block: 0.5rem;        /* less vertical space */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.landingMainContainer {
+  flex: 1;  /* take the rest of the height */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 2rem;  /* slightly slimmer left-right padding */
+}
+
+
+.landingPageContainer nav h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.landingPageContainer nav .navlist {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.landingPageContainer nav .navlist p,
+.landingPageContainer nav .navlist a {
+  cursor: pointer;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.landingPageContainer nav .navlist p:hover,
+.landingPageContainer nav .navlist a:hover {
+  color: var(--brand-primary);
+}
+
+
+.landingMainContainer>div:nth-child(1) {
+  font-size: 2.2rem;
+  max-width: 48%;
+}
+
+.landingMainContainer>div:nth-child(1) h1 {
+  font-size: 3rem;
+  line-height: 1.05;
+}
+
+.landingMainContainer>div:nth-child(1) h1 span {
+  color: var(--brand-primary);
+}
+
+.landingMainContainer>div:nth-child(1) p {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+/* CTA buttons */
+.landingMainContainer>div:nth-child(1) div[role='button'] {
+  margin-top: 1.6rem;
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+}
+
+button.cta {
+  background: var(--brand-primary);
+  color: #fff;
+  border: none;
+  padding: 12px 22px;
+  border-radius: var(--btn-radius);
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(124,58,237,0.12);
+}
+
+button.cta.outline {
+  background: transparent;
+  color: var(--brand-primary);
+  border: 2px solid var(--brand-primary);
+  padding: 10px 20px;
+}
+
+.landingMainContainer>div:nth-child(2) img {
+  height: 70vh;
+  width: auto;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(16,24,40,0.06);
+}
+
+/* NAVBAR used in Home page */
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(16,24,40,0.04);
+}
+
+.navBar h2 { color: var(--brand-primary); }
+
+/* meet container layout */
+.meetContainer {
+  display: flex;
+  padding: 20px;
+  height: calc(100vh - 64px);
+  gap: 6vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftPanel {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.rightPanel img {
+  width: 36vw;
+  height: auto;
+  border-radius: 16px;
+}
+
+/* small responsive rules */
+@media (max-width: 900px) {
+  .landingMainContainer { flex-direction: column; gap: 20px; padding-inline: 1.2rem; }
+  .landingMainContainer>div:nth-child(1) { max-width: 100%; text-align: center; }
+  .rightPanel img { display: none; }
+}
+
+/* optional: softer Paper background across the app - paste in index.css or App.css */
+.MuiPaper-root {
+  background-color: rgba(255,255,255,0.95) !important;
+}
